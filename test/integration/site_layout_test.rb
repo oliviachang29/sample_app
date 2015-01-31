@@ -1,5 +1,6 @@
 require 'test_helper'
 
+#This is a comment.
 class SiteLayoutTest < ActionDispatch::IntegrationTest
 
   test "layout links" do
