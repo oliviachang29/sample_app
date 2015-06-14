@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  attr_accessor :remember_token
 	# Change email to downcase
 	before_save { self.email = email.downcase}
 
@@ -14,4 +15,19 @@ class User < ActiveRecord::Base
     has_secure_password
     # Make sure the password has a minimum length
     validates :password, length: { minimum: 6 }
+
+    def User.digest(string)
+    	cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+    												  BCrypt::Engine.cost
+      BCrypt::Password.create(string, cost: cost)
+  	end
+
+  # Returns a random token.
+  def User.new_token
+    SecureRandom.urlsafe_base64
+  end
+
+  # def remember
+  self.remember_token = User.new_toekn
+  update_attribute(:remember_digest, User.digest(remember_token))
 end

@@ -1,2 +1,4 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-# empty
+harry:
+    name: Harry Potter
+    email: harry@example.com
+    password_digest: <%= User.digest('password') %> # Fixtures support embedded ruby

@@ -11,7 +11,6 @@ gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-ruby '2.0.0'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
@@ -32,5 +31,3 @@ group :production do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
-
-#there's something different
