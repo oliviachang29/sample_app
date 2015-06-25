@@ -1,6 +1,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src: font-url('ProximaNova-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: font-url('ProximaNova-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -14,10 +28,12 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 html {
+  font-family: 'Proxima Nova Regular', sans-serif;
   overflow-y: scroll;
 }
 
 body {
+  font-family: 'Proxima Nova Regular', sans-serif;
   padding-top: 60px;
 }
 
@@ -39,10 +55,12 @@ textarea {
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Proxima Nova Regular', sans-serif;
   line-height: 1;
 }
 
 h1 {
+  font-family: 'Proxima Nova Bold', sans-serif;
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
@@ -50,6 +68,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'Proxima Nova Bold', sans-serif;
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
@@ -59,7 +78,8 @@ h2 {
 }
 
 p {
-  font-size: 1.1em;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-size: 1.3em;
   line-height: 1.7em;
 }
 
@@ -67,6 +87,7 @@ p {
 /* header */
 
 #logo {
+  font-family: 'Proxima Nova Regular', sans-serif;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -121,6 +142,7 @@ aside {
 /* footer */
 
 footer {
+  font-family: 'Proxima Nova Regular', sans-serif;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
@@ -147,6 +169,7 @@ footer {
 /* forms */
 
 input, textarea, select, .uneditable-input {
+  font-family: 'Proxima Nova Regular', sans-serif;
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
@@ -154,10 +177,12 @@ input, textarea, select, .uneditable-input {
 }
 
 input {
+  font-family: 'Proxima Nova Regular', sans-serif;
   height: auto !important;
 }
 
 #error_explanation {
+  font-family: 'Proxima Nova Regular', sans-serif;
   color: red;
   ul {
     color: red;
@@ -166,6 +191,7 @@ input {
 }
 
 .field_with_errors {
+  font-family: 'Proxima Nova Regular', sans-serif;
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
@@ -175,6 +201,7 @@ input {
 /* forms */
 
 .checkbox {
+  font-family: 'Proxima Nova Regular', sans-serif;
   margin-top: -10px;
   margin-bottom: 10px;
   span {
@@ -184,6 +211,7 @@ input {
 }
 
 #session_remember_me {
+  font-family: 'Proxima Nova Regular', sans-serif;
   width: auto;
   margin-left: 0;
 }
@@ -191,6 +219,7 @@ input {
 /* miscellaneous */
 
 .debug_dump {
+  font-family: 'Proxima Nova Regular', sans-serif;
   clear: both;
   float: left;
   width: 100%;
