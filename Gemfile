@@ -12,6 +12,9 @@ gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'faker',                '1.4.2'
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

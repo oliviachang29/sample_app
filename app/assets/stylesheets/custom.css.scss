@@ -105,6 +105,7 @@ p {
 /* sidebar */
 
 aside {
+font-family: 'Proxima Nova Regular', sans-serif;
   section.user_info {
     margin-top: 20px;
   }
@@ -214,6 +215,18 @@ input {
   font-family: 'Proxima Nova Regular', sans-serif;
   width: auto;
   margin-left: 0;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
 }
 
 /* miscellaneous */

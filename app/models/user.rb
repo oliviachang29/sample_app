@@ -12,15 +12,15 @@ class User < ActiveRecord::Base
  	validates :email, presence: true, length: { maximum: 255 },
                   	  format: { with: VALID_EMAIL_REGEX },
                       uniqueness: { case_sensitive: false }
-    has_secure_password
-    # Make sure the password has a minimum length
-    validates :password, length: { minimum: 6 }
+  has_secure_password
+  # Make sure the password has a minimum length
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-    def User.digest(string)
-    	cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-    												  BCrypt::Engine.cost
-      BCrypt::Password.create(string, cost: cost)
-  	end
+  def User.digest(string)
+  	cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+  												  BCrypt::Engine.cost
+    BCrypt::Password.create(string, cost: cost)
+	end
 
   # Returns a random token.
   def User.new_token
